@@ -1,6 +1,6 @@
 <!--logs.wxml-->
 <view class="container log-list">
   <block wx:for="{{logs}}" wx:for-item="log">
-    <text class="log-item">孟召宇1111</text>
+    <text class="log-item">李泽辉</text>
   </block>
 </view>
