@@ -1,5 +1,9 @@
 //index.js
 //获取应用实例
+import {HTTP} from "../../utils/http.js"
+
+let _index = new HTTP()
+
 const app = getApp()
 
 Page({
@@ -16,6 +20,19 @@ Page({
     })
   },
   onLoad: function () {
+    let data = {
+      url: "https://www.koocv.com/article/shoplist",
+      method:"GET",
+      data: {
+        page:2,
+        rows:20
+      }
+    }
+    _index.request(data).then(res => {
+      console.log(res)
+    })
+
+
     if (app.globalData.userInfo) {
       this.setData({
         userInfo: app.globalData.userInfo,
