@@ -1,11 +1,8 @@
 //index.js
 //获取应用实例
 import { IndexMode} from "../../mode/mode.js"
-
 let _IndexMode = new IndexMode()
-
 const app = getApp()
-
 Page({
   data: {
     motto: 'Hello World',
@@ -23,7 +20,6 @@ Page({
     _IndexMode.Api().then(res => {
       console.log(res)
     })
-
 
     if (app.globalData.userInfo) {
       this.setData({
