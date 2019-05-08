@@ -13,8 +13,13 @@
 	},
 	"compileType": "miniprogram",
 	"libVersion": "2.6.6",
+<<<<<<< HEAD
 	"appid": "wxc6a184b4aa5348dc",
 	"projectname": "lilaomeng",
+=======
+	"appid": "wx723a4ecf1f7f1374",
+	"projectname": "mzy",
+>>>>>>> 5e4bc506ce1b0dc207e54710f4c02aab61843af6
 	"debugOptions": {
 		"hidedInDevtools": []
 	},
