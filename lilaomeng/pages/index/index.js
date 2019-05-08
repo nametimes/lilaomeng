@@ -1,8 +1,8 @@
 //index.js
 //获取应用实例
-import {HTTP} from "../../utils/http.js"
+import { IndexMode} from "../../mode/mode.js"
 
-let _index = new HTTP()
+let _IndexMode = new IndexMode()
 
 const app = getApp()
 
@@ -20,15 +20,7 @@ Page({
     })
   },
   onLoad: function () {
-    let data = {
-      url: "https://www.koocv.com/article/shoplist",
-      method:"GET",
-      data: {
-        page:2,
-        rows:20
-      }
-    }
-    _index.request(data).then(res => {
+    _IndexMode.Api().then(res => {
       console.log(res)
     })
 

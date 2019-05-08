@@ -1,21 +1,24 @@
+import { config } from '../config.js'
+
 class HTTP {
-  request(data){
-    let method = !data.method ? "GET":data.method
+  request(params){
+    let method = !params.method ? "GET" : params.method
+    console.log(params.data)
     return new Promise((a,b) => {
+    
       wx.request({
-        url:data.url,
+        url: config.api_base_url + params.url,
         method,
-        data:data.data || null,
+        data: params.data || null,
         header: {
-          'content-type': 'application/json' // 默认值
+          'content-type': 'application/x-www-form-urlencoded'
         },
         success:res => {
           a(res)
-          // console.log(res)
         },
         fail:err => {
           b(err)
-          // console.log(err)
+          console.log(err)
         }
       })
     })
