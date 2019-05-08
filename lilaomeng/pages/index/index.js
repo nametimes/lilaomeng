@@ -17,7 +17,11 @@ Page({
     })
   },
   onLoad: function () {
-    _IndexMode.Api().then(res => {
+    let a = {
+      page: '2',
+      rows: '10'
+    }
+    _IndexMode.Api(a).then(res => {
       console.log(res)
     })
 

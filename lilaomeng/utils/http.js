@@ -3,9 +3,7 @@ import { config } from '../config.js'
 class HTTP {
   request(params){
     let method = !params.method ? "GET" : params.method
-    console.log(params.data)
     return new Promise((a,b) => {
-    
       wx.request({
         url: config.api_base_url + params.url,
         method,
