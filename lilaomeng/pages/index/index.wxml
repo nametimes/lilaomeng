@@ -11,3 +11,6 @@
     <text class="user-motto">{{motto}}</text>
   </view>
 </view>
+<view>
+    <view>这是孟召宇改</view>
+</view>
